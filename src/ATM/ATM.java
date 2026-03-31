@@ -12,7 +12,13 @@ public class ATM {
 	}
 	
 	public static int withdraw(int b) {
-		bal = bal - b;
+		
+		if (b > bal || bal <= 0) {
+			System.out.println("Insufficient balance Or Amount requested for withdrawl is greater than availble balance amount.");
+		}
+		else {
+			bal = bal - b;
+		}
 		return bal;
 	}
 	
@@ -20,15 +26,14 @@ public class ATM {
 		ATM.displayBalance();
 		ATM.deposit(1000);
 		ATM.displayBalance();
-		ATM.withdraw(500);
+		ATM.withdraw(1500);
 		ATM.displayBalance();
-		ATM.deposit(6);
-		ATM.displayBalance();
-		ATM.deposit(1);
-		ATM.displayBalance();
-		ATM.withdraw(5);
-		ATM.displayBalance();
-		ATM.withdraw(6);
-		ATM.displayBalance();
+		withdraw(500);
+		displayBalance();
+		withdraw(500);
+		displayBalance();
+		withdraw(500);
+		displayBalance();
+		withdraw(500);
 		}
 }
