@@ -3,37 +3,25 @@ package ATM;
 public class ATM {
 	static int bal = 0;
 	public static void displayBalance() {
-		System.out.println("Current balance is " + bal);
+		System.out.println("Current balance is $" + bal+"/-");
 	}
 	
 	public static int deposit(int a) {
 		bal = bal + a;
+		System.out.println("$"+a+ "/- Has been depostied sucessfully!!!");
 		return bal;
 	}
 	
 	public static int withdraw(int b) {
 		
 		if (b > bal) {
-			System.out.println("Insufficient balance Or Amount requested for withdrawl is greater than availble balance amount.");
+			System.out.println("***Amount $"+b+"/- Cannot be withdrawn due to Insufficient balance.***");
 		}
 		else {
 			bal = bal - b;
+			System.out.println("$"+b+ "/- Has been withdrawn sucessfully!");
 		}
 		return bal;
 	}
 	
-	public static void main(String args[]) {
-		ATM.displayBalance();
-		ATM.deposit(1000);
-		ATM.displayBalance();
-		ATM.withdraw(1500);
-		ATM.displayBalance();
-		withdraw(500);
-		displayBalance();
-		withdraw(500);
-		displayBalance();
-		withdraw(500);
-		withdraw(1500);
-		displayBalance();
-		}
 }
