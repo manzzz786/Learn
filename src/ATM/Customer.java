@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class Customer {
 
 	public static void main(String[] args) {
-		boolean l = true;
+		boolean l = true; 
+		//This variable is for starting the loop.
+		
 		
 		System.out.println("***Welcome To Mybank ATM***");
 		
@@ -46,7 +48,7 @@ public class Customer {
 				l = false;
 		}
 		
-		System.out.println("Thankyou.");
+		System.out.println("***Thankyou.***");
 		sc.close();	
 	}
 
