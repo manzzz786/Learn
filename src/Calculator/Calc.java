@@ -1,12 +1,19 @@
 package Calculator;
 
 public class Calc {
-/*things to do 
-Create Methods for following
-Cacluclator program
-Method for calculating area of triangle
-Method for calculating area of circle
-Method for calculating area of rectnagle
+/*Method for calculating area of triangle*/
+public double areaTriangle(double base, double height){
+  double area = (base * height)/2;
+  return area;
+}
+  
+//Method for calculating area of circle
+public double areaCircle(double radius){
+  double area = Math.PI * (radius * radius); 
+  return area;
+} 
+/*Method for calculating area of rectnagle
+
 Method for calculating (a+b)2
 Bank Program
 Method for calculting simple interest
